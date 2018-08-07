@@ -127,6 +127,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.orgLabel{
+  width: 150px;
+}
 h3 {
   margin: 10px 0 0;
 }
@@ -145,13 +148,10 @@ input{
   margin: 5px 5px 5px;
   width: 70px;
 }
-
 .checkForm{
   text-align: left;
 }
-.orgLabel{
-  width: 150px;
-}
+
 .paymentVal{
   text-align: right;
 }
