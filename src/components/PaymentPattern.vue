@@ -14,25 +14,44 @@
     <input id="input2" v-model="nextMounth"/>
 
     <h3>комуналка</h3>
-    <label for="input3">{{nomerRahunku}}</label>
-    <input id="input3"v-model="utilityBill"/>
-    <label for="input4">{{summa}}</label>
-    <input id="input4"v-model="utilityBillSumm"/>
+    <div class="divFlex">
+      <div>
+        <label for="input3">{{nomerRahunku}}</label>
+        <input id="input3"v-model="utilityBill"/>
+      </div>
+      <div>
+        <label for="input4">{{summa}}</label>
+        <input id="input4"v-model="utilityBillSumm"/>
+      </div>
+    </div>
 
     <h3>земля</h3>
-    <label for="input5">{{nomerRahunku}}</label>
-    <input id="input5" v-model="teritoryBill"/>
-    <label for="input6">{{summa}}</label>
-    <input id="input6" v-model="teritoryBillSumm"/>
+    <div class="divFlex">
+      <div>
+        <label for="input5">{{nomerRahunku}}</label>
+        <input id="input5" v-model="teritoryBill"/>
+      </div>
+      <div>
+        <label for="input6">{{summa}}</label>
+        <input id="input6" v-model="teritoryBillSumm"/>
+      </div>
+    </div>
 
     <h3>оренда</h3>
-    <label for="input7">{{nomerRahunku}}</label>
-    <input id="input7" v-model="rentBill"/>
-    <label for="input8">{{summa}}</label>
-    <input id="input8" v-model="rentBillSumm"/>
+    <div class="divFlex">
+      <div>
+        <label for="input7">{{nomerRahunku}}</label>
+        <input id="input7" v-model="rentBill"/>
+      </div>
+      <div>
+        <label for="input8">{{summa}}</label>
+        <input id="input8" v-model="rentBillSumm"/>
+      </div>
+    </div>
+
 
     <h1>Форма</h1>
-    <table style="width:100%">
+    <table>
       <tr>
         <td>Відшкодування комунальних витрат за {{currentMounth}} від {{orgLabel}} рах №сф-{{utilityBill}} від {{fromDate}}</td>
         <td class="paymentVal">{{utilityBillSumm}}</td>
@@ -130,6 +149,14 @@ export default {
 .orgLabel{
   width: 150px;
 }
+.paymentVal{
+  padding-left: 10px;
+  text-align: right;
+}
+.divFlex{
+  display: flex;
+  flex-wrap: wrap;
+}
 h3 {
   margin: 10px 0 0;
 }
@@ -150,9 +177,5 @@ input{
 }
 .checkForm{
   text-align: left;
-}
-
-.paymentVal{
-  text-align: right;
 }
 </style>
